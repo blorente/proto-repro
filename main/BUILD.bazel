@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "main_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/blorente/scratch/main",
+    visibility = ["//visibility:public"],
+    deps = ["//proto"],
+)

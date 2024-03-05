@@ -1,0 +1,9 @@
+syntax = "proto3";
+package proto;
+
+option go_package = "github.com/blorente/scratch/proto";
+
+// Greeter service greets you.
+service QuotaService { rpc Greet(GreetRequest) returns (GreetResponse); }
+message GreetRequest { string name = 1; }
+message GreetResponse { string greeting = 1; }
