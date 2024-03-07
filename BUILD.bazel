@@ -1,4 +1,8 @@
-load("@bazel_gazelle//:def.bzl", "gazelle")
+# load("@bazel_gazelle//:def.bzl", "gazelle")
+# load("//tools:proto_compilers.bzl", "proto_compilers")
 
 # gazelle:prefix github.com/blorente/scratch
-gazelle(name = "gazelle")
+# gazelle(name = "gazelle")
+
+# proto_compilers()
+
