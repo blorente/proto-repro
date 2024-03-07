@@ -15,11 +15,10 @@ test_version() {
   set -x
   USE_BAZEL_VERSION="$ver" bazel clean --expunge 2>/dev/null
   USE_BAZEL_VERSION="$ver" bazel build //proto:proto_go_proto 2>/dev/null
+  outfile=$(USE_BAZEL_VERSION="$ver" bazel aquery "outputs(\".*.go\", //proto:proto_go_proto)" 2>/dev/null | grep "Outputs" | sed 's#.*Outputs: \[\(.*\)\]#\1#')
   set +x
-  assert_exists bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/
-  assert_exists bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go
-
-  echo "==> Ver $ver OK!"
+  assert_exists $(echo "$outfile" | sed 's:test.pb.go::')
+  assert_exists "$outfile"
 }
 test_version "7.0.2"
 test_version "6.4.0"
