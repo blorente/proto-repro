@@ -1,0 +1,121 @@
+++++++ Setting a disk cache ++++++
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 6.4.0 ==
++ USE_BAZEL_VERSION=6.4.0
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+++++++ Setting the same disk cache again ++++++
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+== Testing 6.4.0 ==
++ USE_BAZEL_VERSION=6.4.0
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.Pdy4JxQcZW //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+++++++ Setting a different disk cache ++++++
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.kb9GvA4X0A //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 6.4.0 ==
++ USE_BAZEL_VERSION=6.4.0
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.kb9GvA4X0A //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.kb9GvA4X0A //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache=/var/folders/m3/6dl940k155g8zjdp8wy7gtkw0000gn/T/tmp.kb9GvA4X0A //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+ ===> FAIL!
+Expected bazel-out/darwin_arm64-fastbuild/bin/proto/proto_go_proto_/github.com/blorente/scratch/proto/test.pb.go to exist, but it didn't
+++++++ Not Setting a disk cache ++++++
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 6.4.0 ==
++ USE_BAZEL_VERSION=6.4.0
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+++++++ Setting a disk cache to nothing ++++++
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache= //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 6.4.0 ==
++ USE_BAZEL_VERSION=6.4.0
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache= //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache= //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+== Testing 7.0.2 ==
++ USE_BAZEL_VERSION=7.0.2
++ bazel --nohome_rc --bazelrc=/dev/null --noworkspace_rc --nosystem_rc build --disk_cache= //proto:proto_go_proto
++ [[ 0 != 0 ]]
++ set +x
+
+

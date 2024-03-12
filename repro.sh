@@ -24,9 +24,29 @@ test_version() {
 }
 
 # ---> Setting up the disk cache, not setting up the disk cache
+disk_cache=$(mktemp -d)
+other_disk_cache=$(mktemp -d)
 echo "++++++ Setting a disk cache ++++++"
 bazel_startup_flags=( "--nohome_rc" "--bazelrc=/dev/null" "--noworkspace_rc" "--nosystem_rc" )
-bazel_flags=( "--disk_cache=/tmp/mycache" )
+bazel_flags=( "--disk_cache=${disk_cache}" )
+
+test_version "7.0.2"
+test_version "6.4.0"
+test_version "7.0.2"
+test_version "7.0.2"
+
+echo "++++++ Setting the same disk cache again ++++++"
+bazel_startup_flags=( "--nohome_rc" "--bazelrc=/dev/null" "--noworkspace_rc" "--nosystem_rc" )
+bazel_flags=( "--disk_cache=${disk_cache}" )
+
+test_version "7.0.2"
+test_version "6.4.0"
+test_version "7.0.2"
+test_version "7.0.2"
+
+echo "++++++ Setting a different disk cache ++++++"
+bazel_startup_flags=( "--nohome_rc" "--bazelrc=/dev/null" "--noworkspace_rc" "--nosystem_rc" )
+bazel_flags=( "--disk_cache=${other_disk_cache}" )
 
 test_version "7.0.2"
 test_version "6.4.0"
